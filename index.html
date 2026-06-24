@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piozza — Premium Wood-Fired Pizzeria</title>
+  <meta name="description" content="Experience authentic wood-fired pizzas crafted with passion. Piozza brings you fresh ingredients, traditional techniques, and unforgettable flavors.">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/images/hero-pizza-angled.png" fetchpriority="high">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-logo">PIOZZA<span>.</span></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo" id="nav-logo">PIOZZA<span>.</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active" id="nav-home">Home</a>
+        <a href="#about" class="nav-link" id="nav-about">About Us</a>
+        <a href="#menu" class="nav-link" id="nav-menu">Menu</a>
+        <a href="#order" class="nav-link" id="nav-order">Order Now</a>
+        <a href="#footer" class="nav-link" id="nav-contact">Contact</a>
+        <a href="#order" class="nav-cta" id="nav-cta">Order Now</a>
+      </div>
+      <!-- Cart icon -->
+      <div class="nav-right">
+        <button class="nav-cart" id="nav-cart" aria-label="Shopping cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </button>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-tag" id="hero-tag">FRESH INGREDIENTS. FIRED TO PERFECTION.</p>
+        <h1 class="hero-headline" id="hero-headline">
+          REAL PIZZA.<br>
+          <span class="accent">REAL GOOD.</span>
+        </h1>
+        <p class="hero-subheadline" id="hero-subheadline">
+          Wood-fired pizzas made with passion,<br>
+          served fresh to your door.
+        </p>
+        <div class="hero-buttons">
+          <a href="#order" class="hero-cta" id="hero-cta">Order Now</a>
+          <button class="hero-watch" id="hero-watch">
+            <span class="play-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </span>
+            Watch Our Story
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual" id="hero-visual">
+        <div class="hero-pizza-wrapper" id="hero-pizza-wrapper">
+          <img 
+            src="assets/images/hero-pizza-angled.png" 
+            alt="Freshly baked pizza floating at an angle from Piozza's wood-fired oven" 
+            class="hero-pizza-img" 
+            id="hero-pizza-img"
+            width="650"
+            height="650"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" id="hero-scroll-indicator">
+      <span>SCROLL TO EXPLORE</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <span class="section-label reveal-left">About Us</span>
+        <h2 class="section-heading reveal-left">MADE WITH LOVE.<br>SERVED WITH PRIDE.</h2>
+        <p class="about-text reveal-left">
+          At Piozza, we believe great pizza starts with 
+          great ingredients. From hand-stretched dough 
+          to farm-fresh toppings — every bite is crafted 
+          to perfection.
+        </p>
+        <div class="about-signature reveal-left">
+          <div class="signature-line">Chef Marco</div>
+          <div class="signature-role">Founder, Piozza</div>
+        </div>
+      </div>
+      <div class="about-images">
+        <div class="about-img-wrapper reveal-right">
+          <img 
+            src="assets/images/dough-preparation.png" 
+            alt="Chef carefully kneading pizza dough by hand" 
+            loading="lazy"
+            width="600"
+            height="400"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="stats-bar" id="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal" id="stat-1">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><path d="M12 6v4"/><path d="M9.5 8.5 12 6l2.5 2.5"/></svg>
+          </div>
+          <div class="stat-number" data-count="100" data-suffix="%">0%</div>
+          <div class="stat-label">Fresh Ingredients</div>
+        </div>
+        <div class="stat-item reveal" id="stat-2">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg>
+          </div>
+          <div class="stat-number" data-count="500" data-suffix="&deg;C">0&deg;C</div>
+          <div class="stat-label">Wood Fired Oven</div>
+        </div>
+        <div class="stat-item reveal" id="stat-3">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <div class="stat-number" data-count="10" data-suffix="K+">0K+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item reveal" id="stat-4">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+          </div>
+          <div class="stat-number" data-count="25" data-suffix="+">0+</div>
+          <div class="stat-label">Signature Pizzas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU SECTION ========== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="menu-header">
+        <div class="menu-header-left">
+          <span class="section-label reveal">Our Menu</span>
+          <h2 class="section-heading reveal">PIZZA FAVORITES</h2>
+        </div>
+        <a href="#" class="menu-view-all reveal" id="menu-view-all">
+          View Full Menu
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="menu-grid">
+        <!-- Card 1: Pepperoni Feast -->
+        <div class="menu-card reveal" id="menu-card-1">
+          <div class="menu-card-img">
+            <img 
+              src="assets/images/pepperoni-pizza.png" 
+              alt="Pepperoni Feast pizza with classic pepperoni and mozzarella" 
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Pepperoni Feast</h3>
+            <p class="menu-card-desc">Classic pepperoni with mozzarella &amp; marinara.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">&#8377;499</span>
+              <button class="menu-card-btn" id="add-pepperoni" aria-label="Add Pepperoni Feast to cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Margherita -->
+        <div class="menu-card reveal" id="menu-card-2">
+          <div class="menu-card-img">
+            <img 
+              src="assets/images/hero-pizza.png" 
+              alt="Margherita pizza with fresh basil, mozzarella, and cherry tomatoes" 
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Margherita</h3>
+            <p class="menu-card-desc">Fresh basil, mozzarella, cherry tomatoes.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">&#8377;449</span>
+              <button class="menu-card-btn" id="add-margherita" aria-label="Add Margherita to cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Spicy Diavola -->
+        <div class="menu-card reveal" id="menu-card-3">
+          <div class="menu-card-img">
+            <img 
+              src="assets/images/spicy-diavola.png" 
+              alt="Spicy Diavola pizza with salami, chili flakes, and mozzarella" 
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Spicy Diavola</h3>
+            <p class="menu-card-desc">Spicy salami, chili flakes, mozzarella.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">&#8377;519</span>
+              <button class="menu-card-btn" id="add-diavola" aria-label="Add Spicy Diavola to cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Truffle Mushroom -->
+        <div class="menu-card reveal" id="menu-card-4">
+          <div class="menu-card-img">
+            <img 
+              src="assets/images/truffle-mushroom.png" 
+              alt="Truffle Mushroom pizza with wild mushrooms and truffle oil" 
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Truffle Mushroom</h3>
+            <p class="menu-card-desc">Wild mushrooms, truffle oil, mozzarella.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">&#8377;549</span>
+              <button class="menu-card-btn" id="add-truffle" aria-label="Add Truffle Mushroom to cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORDER ONLINE ========== -->
+  <section class="order" id="order">
+    <div class="container">
+      <div class="order-content">
+        <div class="order-text">
+          <span class="section-label reveal">Order Now</span>
+          <h2 class="section-heading reveal">GET YOUR PIZZA<br>DELIVERED</h2>
+          <p class="order-subtext reveal">Order through your favorite platform</p>
+        </div>
+        <div class="order-platforms">
+          <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" class="platform-card platform-swiggy reveal" id="order-swiggy">
+            <svg class="platform-logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <span class="platform-name">SWIGGY</span>
+          </a>
+          <a href="https://www.magicpin.in" target="_blank" rel="noopener noreferrer" class="platform-card platform-magicpin reveal" id="order-magicpin">
+            <svg class="platform-logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="platform-name">magicpin</span>
+          </a>
+          <a href="https://www.zomato.com" target="_blank" rel="noopener noreferrer" class="platform-card platform-zomato reveal" id="order-zomato">
+            <svg class="platform-logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"/></svg>
+            <span class="platform-name">zomato</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid reveal">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">PIOZZA<span>.</span></a>
+          <p class="footer-tagline">Real pizza. Real good.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" id="social-instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" id="social-facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" id="social-twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero" id="footer-link-home">Home</a></li>
+            <li><a href="#about" id="footer-link-about">About Us</a></li>
+            <li><a href="#menu" id="footer-link-menu">Menu</a></li>
+            <li><a href="#footer" id="footer-link-contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Order Now</h4>
+          <ul>
+            <li><a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" id="footer-link-swiggy">Swiggy</a></li>
+            <li><a href="https://www.magicpin.in" target="_blank" rel="noopener noreferrer" id="footer-link-magicpin">Magicpin</a></li>
+            <li><a href="https://www.zomato.com" target="_blank" rel="noopener noreferrer" id="footer-link-zomato">Zomato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@piozza.com" id="footer-link-email">hello@piozza.com</a></li>
+            <li><a href="tel:+919876543210" id="footer-link-phone">+91 98765 43210</a></li>
+            <li><a href="#" id="footer-link-address">Mumbai, India</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Piozza. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & Plugins (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="main.js?v=1.1"></script>
+</body>
+</html>
