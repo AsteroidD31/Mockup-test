@@ -188,6 +188,9 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
 }
 
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -352,29 +355,39 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
 }
 
 /* Hero Pizza — 3D Floating */
+/* Hero Pizza — Enlarged and Static */
 .hero-visual {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  perspective: 1200px;
+}
+
+@media (min-width: 1025px) {
+  .hero-visual {
+    position: absolute;
+    right: -10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60vw;
+    max-width: 950px;
+    pointer-events: none;
+  }
 }
 
 .hero-pizza-wrapper {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  transform-style: preserve-3d;
+  max-width: 100%;
 }
 
 .hero-pizza-img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  will-change: transform;
-  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.6));
-  transform: rotateX(8deg) rotateZ(-5deg);
+  filter: drop-shadow(0 40px 100px rgba(0, 0, 0, 0.7));
+  transform: rotate(-25deg);
 }
 
 /* Scroll indicator */
@@ -607,37 +620,33 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   font-size: 0.78rem;
   color: var(--color-text-muted);
   line-height: 1.5;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0;
 }
 
 .menu-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu-card-price {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  color: var(--color-text-primary);
-  letter-spacing: 1px;
+  margin-top: var(--space-md);
 }
 
 .menu-card-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
+  width: 100%;
+  height: auto;
+  padding: 0.65rem var(--space-md);
+  border-radius: var(--radius-sm);
   background: var(--color-accent);
   color: var(--color-text-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   transition: background var(--duration-fast), transform var(--duration-fast);
 }
 
 .menu-card-btn:hover {
   background: var(--color-accent-hover);
-  transform: scale(1.1);
+  transform: translateY(-1px);
 }
 
 /* ============================
@@ -718,6 +727,162 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
 }
 
 .platform-name { white-space: nowrap; }
+
+.platform-card:has(.platform-logo-img) {
+  padding: 0;
+  background: none;
+  border: none;
+  height: 52px;
+  display: block;
+}
+
+.platform-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  display: block;
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              filter var(--duration-fast) var(--ease-smooth);
+}
+
+.platform-card:hover .platform-logo-img {
+  transform: scale(1.04);
+}
+
+.platform-swiggy:hover .platform-logo-img {
+  filter: drop-shadow(0 8px 20px rgba(252, 128, 25, 0.45));
+}
+
+.platform-magicpin:hover .platform-logo-img {
+  filter: drop-shadow(0 8px 20px rgba(111, 66, 193, 0.45));
+}
+
+.platform-zomato:hover .platform-logo-img {
+  filter: drop-shadow(0 8px 20px rgba(226, 55, 68, 0.45));
+}
+
+/* ============================
+   REVIEWS SECTION
+   ============================ */
+.reviews {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.reviews-slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.reviews-slider-track {
+  display: flex;
+  gap: var(--space-md);
+  width: max-content;
+}
+
+.reviews-slider-track::after {
+  content: "";
+  display: block;
+  width: 0;
+  flex-shrink: 0;
+}
+
+.review-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform var(--duration-fast), border-color var(--duration-fast);
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+
+.review-stars {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  font-style: italic;
+}
+
+.review-author {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 1px;
+}
+
+/* Desktop infinite loop animation — using longhand to avoid shorthand resetting animation-play-state */
+@media (min-width: 1025px) {
+  .reviews-slider-track {
+    animation-name: reviewsMarquee;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+
+  .reviews-slider-container:hover .reviews-slider-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes reviewsMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Mobile responsive swipe scroll snap */
+@media (max-width: 1024px) {
+  .reviews {
+    padding: var(--space-2xl) 0;
+  }
+  .reviews-slider-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-lg);
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  .reviews-slider-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+  }
+  .reviews-slider-track {
+    padding: 0 var(--space-lg);
+  }
+  .review-card {
+    scroll-snap-align: center;
+    width: 290px; /* slightly smaller on mobile */
+  }
+  .review-card-clone {
+    display: none; /* hide cloned cards on mobile so users don't see duplicates */
+  }
+}
 
 /* ============================
    FOOTER
@@ -821,7 +986,7 @@ button { border: none; cursor: pointer; font-family: inherit; background: none; 
   .hero-visual { order: 1; }
   .hero-subheadline { margin: 0 auto var(--space-xl); }
   .hero-buttons { justify-content: center; }
-  .hero-pizza-wrapper { max-width: 450px; margin: 0 auto; }
+  .hero-pizza-wrapper { max-width: min(85%, 550px); margin: 0 auto; }
 
   .about .container {
     grid-template-columns: 1fr;

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piozza — Premium Wood-Fired Pizzeria</title>
-  <meta name="description" content="Experience authentic wood-fired pizzas crafted with passion. Piozza brings you fresh ingredients, traditional techniques, and unforgettable flavors.">
+  <title>La Farina Bianco — Premium Wood-Fired Pizzeria</title>
+  <meta name="description" content="Experience authentic wood-fired pizzas crafted with passion. La Farina Bianco brings you fresh ingredients, traditional techniques, and unforgettable flavors.">
 
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,32 +15,29 @@
   <link rel="stylesheet" href="index.css">
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="assets/images/hero-pizza-angled.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-pizza-angled-no-smoke.png" fetchpriority="high">
 </head>
 <body>
 
   <!-- Loading Screen -->
   <div class="loading-screen" id="loading-screen">
-    <div class="loading-logo">PIOZZA<span>.</span></div>
+    <div class="loading-logo">LA FARINA BIANCO<span>.</span></div>
   </div>
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="nav-logo" id="nav-logo">PIOZZA<span>.</span></a>
+      <a href="#" class="nav-logo" id="nav-logo">LA FARINA BIANCO<span>.</span></a>
       <div class="nav-links" id="nav-links">
         <a href="#hero" class="nav-link active" id="nav-home">Home</a>
         <a href="#about" class="nav-link" id="nav-about">About Us</a>
         <a href="#menu" class="nav-link" id="nav-menu">Menu</a>
-        <a href="#order" class="nav-link" id="nav-order">Order Now</a>
+        <a href="#reviews" class="nav-link" id="nav-reviews">Reviews</a>
         <a href="#footer" class="nav-link" id="nav-contact">Contact</a>
-        <a href="#order" class="nav-cta" id="nav-cta">Order Now</a>
       </div>
-      <!-- Cart icon -->
+      <!-- Order Now Button -->
       <div class="nav-right">
-        <button class="nav-cart" id="nav-cart" aria-label="Shopping cart">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-        </button>
+        <a href="#order" class="nav-cta" id="nav-cta">Order Now</a>
         <div class="nav-toggle" id="nav-toggle">
           <span></span>
           <span></span>
@@ -65,18 +62,12 @@
         </p>
         <div class="hero-buttons">
           <a href="#order" class="hero-cta" id="hero-cta">Order Now</a>
-          <button class="hero-watch" id="hero-watch">
-            <span class="play-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </span>
-            Watch Our Story
-          </button>
         </div>
       </div>
       <div class="hero-visual" id="hero-visual">
         <div class="hero-pizza-wrapper" id="hero-pizza-wrapper">
           <img 
-            src="assets/images/hero-pizza-angled.png" 
+            src="assets/images/hero-pizza-angled-no-smoke.png" 
             alt="Freshly baked pizza floating at an angle from Piozza's wood-fired oven" 
             class="hero-pizza-img" 
             id="hero-pizza-img"
@@ -105,10 +96,7 @@
           to farm-fresh toppings — every bite is crafted 
           to perfection.
         </p>
-        <div class="about-signature reveal-left">
-          <div class="signature-line">Chef Marco</div>
-          <div class="signature-role">Founder, Piozza</div>
-        </div>
+
       </div>
       <div class="about-images">
         <div class="about-img-wrapper reveal-right">
@@ -188,12 +176,7 @@
           <div class="menu-card-body">
             <h3 class="menu-card-name">Pepperoni Feast</h3>
             <p class="menu-card-desc">Classic pepperoni with mozzarella &amp; marinara.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">&#8377;499</span>
-              <button class="menu-card-btn" id="add-pepperoni" aria-label="Add Pepperoni Feast to cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
-              </button>
-            </div>
+
           </div>
         </div>
 
@@ -211,12 +194,7 @@
           <div class="menu-card-body">
             <h3 class="menu-card-name">Margherita</h3>
             <p class="menu-card-desc">Fresh basil, mozzarella, cherry tomatoes.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">&#8377;449</span>
-              <button class="menu-card-btn" id="add-margherita" aria-label="Add Margherita to cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
-              </button>
-            </div>
+
           </div>
         </div>
 
@@ -234,12 +212,7 @@
           <div class="menu-card-body">
             <h3 class="menu-card-name">Spicy Diavola</h3>
             <p class="menu-card-desc">Spicy salami, chili flakes, mozzarella.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">&#8377;519</span>
-              <button class="menu-card-btn" id="add-diavola" aria-label="Add Spicy Diavola to cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
-              </button>
-            </div>
+
           </div>
         </div>
 
@@ -257,12 +230,107 @@
           <div class="menu-card-body">
             <h3 class="menu-card-name">Truffle Mushroom</h3>
             <p class="menu-card-desc">Wild mushrooms, truffle oil, mozzarella.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">&#8377;549</span>
-              <button class="menu-card-btn" id="add-truffle" aria-label="Add Truffle Mushroom to cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
-              </button>
-            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS SECTION ========== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="reviews-header text-center">
+        <span class="section-label reveal">Reviews</span>
+        <h2 class="section-heading reveal">WHAT OUR CUSTOMERS SAY</h2>
+      </div>
+      <div class="reviews-slider-container reveal">
+        <div class="reviews-slider-track" id="reviews-track">
+          <!-- Card 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The pizzas are consistently excellent, the atmosphere is warm and welcoming, and the service is always prompt. A hidden gem for authentic wood-fired pizza.”</p>
+            <div class="review-author">— Nikku Singh</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“One of the most welcoming places I’ve visited. The Margherita pizza is outstanding, and the tiramisu is a must-try. Perfect escape from the city’s rush.”</p>
+            <div class="review-author">— Akanksha V G</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Every visit has been better than the last. Cozy ambience, authentic flavors, and a dining experience that keeps us coming back.”</p>
+            <div class="review-author">— Ranjitha B</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Great pizzas, unique menu options, affordable pricing, and a peaceful atmosphere without the usual crowds.”</p>
+            <div class="review-author">— Ritul Singh</div>
+          </div>
+          <!-- Card 5 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Fresh wood-fired pizzas, friendly staff, quick service, and excellent value for money. A neighborhood favorite worth discovering.”</p>
+            <div class="review-author">— Local Food Reviewer</div>
+          </div>
+          <!-- Card 6 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The best wood-fired pizza I’ve had. Crisp crust, fresh ingredients, and outstanding flavors. A cozy spot with a welcoming atmosphere that keeps you coming back.”</p>
+            <div class="review-author">— Kavi Arasu G</div>
+          </div>
+          <!-- Card 7 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“A classy café with a wonderful atmosphere. The pizzas are delicious, and the staff are incredibly polite, kind, and attentive.”</p>
+            <div class="review-author">— Yeshwanth Kandagadla</div>
+          </div>
+
+          <!-- CLONES for infinite looping scroll -->
+          <!-- Card 1 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The pizzas are consistently excellent, the atmosphere is warm and welcoming, and the service is always prompt. A hidden gem for authentic wood-fired pizza.”</p>
+            <div class="review-author">— Nikku Singh</div>
+          </div>
+          <!-- Card 2 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“One of the most welcoming places I’ve visited. The Margherita pizza is outstanding, and the tiramisu is a must-try. Perfect escape from the city’s rush.”</p>
+            <div class="review-author">— Akanksha V G</div>
+          </div>
+          <!-- Card 3 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Every visit has been better than the last. Cozy ambience, authentic flavors, and a dining experience that keeps us coming back.”</p>
+            <div class="review-author">— Ranjitha B</div>
+          </div>
+          <!-- Card 4 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Great pizzas, unique menu options, affordable pricing, and a peaceful atmosphere without the usual crowds.”</p>
+            <div class="review-author">— Ritul Singh</div>
+          </div>
+          <!-- Card 5 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Fresh wood-fired pizzas, friendly staff, quick service, and excellent value for money. A neighborhood favorite worth discovering.”</p>
+            <div class="review-author">— Local Food Reviewer</div>
+          </div>
+          <!-- Card 6 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The best wood-fired pizza I’ve had. Crisp crust, fresh ingredients, and outstanding flavors. A cozy spot with a welcoming atmosphere that keeps you coming back.”</p>
+            <div class="review-author">— Kavi Arasu G</div>
+          </div>
+          <!-- Card 7 Clone -->
+          <div class="review-card review-card-clone">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“A classy café with a wonderful atmosphere. The pizzas are delicious, and the staff are incredibly polite, kind, and attentive.”</p>
+            <div class="review-author">— Yeshwanth Kandagadla</div>
           </div>
         </div>
       </div>
@@ -280,16 +348,13 @@
         </div>
         <div class="order-platforms">
           <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" class="platform-card platform-swiggy reveal" id="order-swiggy">
-            <svg class="platform-logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            <span class="platform-name">SWIGGY</span>
+            <img src="assets/images/logo-swiggy.png" alt="Swiggy" class="platform-logo-img">
           </a>
           <a href="https://www.magicpin.in" target="_blank" rel="noopener noreferrer" class="platform-card platform-magicpin reveal" id="order-magicpin">
-            <svg class="platform-logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span class="platform-name">magicpin</span>
+            <img src="assets/images/logo-magicpin.png" alt="magicpin" class="platform-logo-img">
           </a>
           <a href="https://www.zomato.com" target="_blank" rel="noopener noreferrer" class="platform-card platform-zomato reveal" id="order-zomato">
-            <svg class="platform-logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"/></svg>
-            <span class="platform-name">zomato</span>
+            <img src="assets/images/logo-zomato.png" alt="zomato" class="platform-logo-img">
           </a>
         </div>
       </div>
@@ -301,10 +366,10 @@
     <div class="container">
       <div class="footer-grid reveal">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">PIOZZA<span>.</span></a>
+          <a href="#" class="nav-logo">LA FARINA BIANCO<span>.</span></a>
           <p class="footer-tagline">Real pizza. Real good.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Instagram" id="social-instagram">
+            <a href="https://www.instagram.com/lafarinabianco/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" id="social-instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
             <a href="#" aria-label="Facebook" id="social-facebook">
@@ -342,7 +407,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Piozza. All rights reserved.</p>
+        <p>&copy; 2024 LA FARINA BIANCO. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -355,6 +420,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Main Script -->
-  <script src="main.js?v=1.1"></script>
+  <script src="main.js"></script>
 </body>
 </html>
+

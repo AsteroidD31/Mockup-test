@@ -87,33 +87,26 @@ function initNavbar() {
 
   // Navbar entrance
   gsap.from('.nav-logo', { y: -20, opacity: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' });
-  gsap.from('.nav-link, .nav-cta', { y: -15, opacity: 0, duration: 0.5, stagger: 0.08, delay: 0.3, ease: 'power3.out' });
+  gsap.from('.nav-link', { y: -15, opacity: 0, duration: 0.5, stagger: 0.08, delay: 0.3, ease: 'power3.out' });
+  gsap.from('.nav-right', { y: -15, opacity: 0, duration: 0.5, delay: 0.4, ease: 'power3.out' });
 }
 
 // ============================================
 // HERO — 3D FLOATING PIZZA
 // ============================================
 function initHeroAnimations() {
-  const pizza = document.getElementById('hero-pizza-img');
-  const wrapper = document.getElementById('hero-pizza-wrapper');
-
-  // Pizza entrance: scale up from small, rotate in from angle, fade in
+  // Pizza entrance: removed to make the pizza a static asset
   const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
   heroTl
-    .fromTo(pizza,
-      { scale: 0.6, rotateX: 25, rotateZ: -15, opacity: 0, y: 80 },
-      { scale: 1, rotateX: 8, rotateZ: -5, opacity: 1, y: 0, duration: 1.4, ease: 'power2.out' }
-    )
     .fromTo('.hero-tag',
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6 },
-      '-=0.9'
+      { y: 0, opacity: 1, duration: 0.6 }
     )
     .fromTo('.hero-headline',
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.8 },
-      '-=0.6'
+      '-=0.4'
     )
     .fromTo('.hero-subheadline',
       { y: 30, opacity: 0 },
@@ -131,68 +124,20 @@ function initHeroAnimations() {
       '-=0.2'
     );
 
-  // Continuous 3D floating animation
-  gsap.to(pizza, {
-    y: -18,
-    rotateX: 10,
-    rotateZ: -3,
-    duration: 3.5,
-    ease: 'sine.inOut',
-    yoyo: true,
-    repeat: -1,
-    delay: 1.5,
-  });
+  // Continuous 3D floating animation: removed to keep pizza static
 
-  // Mouse-driven 3D tilt
-  initPizza3DTilt();
+  // Mouse-driven 3D tilt: removed to keep pizza static
 
-  // Scroll-based parallax
+  // Scroll-based parallax: called below but updated to exclude pizza
   initHeroScrollParallax();
 }
 
 function initPizza3DTilt() {
-  const wrapper = document.getElementById('hero-pizza-wrapper');
-  const hero = document.getElementById('hero');
-  if (!wrapper || !hero) return;
-
-  hero.addEventListener('mousemove', (e) => {
-    const rect = hero.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-    gsap.to(wrapper, {
-      rotateY: x * 8,
-      rotateX: -y * 8,
-      duration: 0.8,
-      ease: 'power2.out',
-      transformPerspective: 1200,
-    });
-  });
-
-  hero.addEventListener('mouseleave', () => {
-    gsap.to(wrapper, {
-      rotateY: 0,
-      rotateX: 0,
-      duration: 1,
-      ease: 'power2.out',
-    });
-  });
+  // Empty function since mouse tilt is disabled for the static pizza
 }
 
 function initHeroScrollParallax() {
-  gsap.to('#hero-pizza-img', {
-    scrollTrigger: {
-      trigger: '#hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 1.5,
-    },
-    scale: 1.2,
-    rotateX: 15,
-    rotateZ: 5,
-    y: -60,
-    ease: 'none',
-  });
+  // Scroll parallax for pizza image: removed to keep pizza static
 
   gsap.to('.hero-content', {
     scrollTrigger: {
@@ -329,10 +274,33 @@ function initFooterAnimation() {
 function initSmoothAnchors() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
       e.preventDefault();
-      const targetEl = document.querySelector(anchor.getAttribute('href'));
-      if (targetEl) lenis.scrollTo(targetEl, { offset: -80 });
+      try {
+        const targetEl = document.querySelector(href);
+        if (targetEl) lenis.scrollTo(targetEl, { offset: -80 });
+      } catch (err) {
+        console.error('Smooth scroll failed for selector:', href, err);
+      }
     });
+  });
+}
+
+// ============================================
+// REVIEWS SLIDER HOVER PAUSE
+// ============================================
+function initReviewsHover() {
+  const container = document.querySelector('.reviews-slider-container');
+  const track = document.getElementById('reviews-track');
+  if (!container || !track) return;
+
+  container.addEventListener('mouseenter', () => {
+    track.style.animationPlayState = 'paused';
+  });
+
+  container.addEventListener('mouseleave', () => {
+    track.style.animationPlayState = 'running';
   });
 }
 
@@ -350,5 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initOrderAnimations();
   initFooterAnimation();
   initSmoothAnchors();
+  initReviewsHover();
   initLoadingScreen();
 });
